@@ -9,5 +9,4 @@ function exec () {
   const valor = 'Local'
   minhaFuncao()
 }
-exec()
 // o mais distante é encontrado pois quando a função "minhaFuncao " foi declarada no contexto léxico do java script valor detinha o valor "Global"
