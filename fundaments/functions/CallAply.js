@@ -1,0 +1,22 @@
+// Nova maneira de se invocar uma função utilizando as funções call e apply
+function getPreco(imposto = 0, moeda = 'R$'){
+  return `${moeda} ${this.preco * (1-this.desc) * (1+imposto)}`
+}
+const produto = {
+  nome:'Notebook',
+  preco: 4589,
+  desc:0.15,
+  getPreco
+}
+global.preco = 20
+global.desc=0.1
+console.log(getPreco())
+console.log(produto.getPreco())
+
+const carro = {preco:4990, desc:0.20}
+console.log(getPreco.call(carro))
+console.log(getPreco.apply(carro))
+
+
+console.log(getPreco.call(carro, 0.17,'$')) // a diferença está na passagem de parâmetros 
+console.log(getPreco.apply(carro,[0.17,'$'] )) 

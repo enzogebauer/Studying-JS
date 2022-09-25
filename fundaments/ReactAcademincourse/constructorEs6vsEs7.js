@@ -1,29 +1,23 @@
 // constructor on ES6
 class Human {
-  constructor(){
+  constructor() {
     this.gender = "male";
   }
-  
-  
 
   printGender() {
     console.log(this.gender);
   }
-
 }
 class Person extends Human {
-  constructor(){
+  constructor() {
     super();
     this.name = "Enzo";
-    this.gender = "female;"
+    this.gender = "female;";
   }
-  
-  
 
-PrintMyName(){
-  console.log(this.name);
-}
-
+  PrintMyName() {
+    console.log(this.name);
+  }
 }
 const person = new Person();
 person.PrintMyName();
@@ -31,30 +25,20 @@ person.printGender();
 
 // constructor no ES7
 class HumanES7 {
-  
   gender = "male";
 
-
-
-
-printGenderES7 = () => {
-  console.log(this.gender);
-}
-
+  printGenderES7 = () => {
+    console.log(this.gender);
+  };
 }
 
 class PersonES7 extends HumanES7 {
-
   name = "Enzo";
-  gender = "female;"
+  gender = "female;";
 
-
-
-
-PrintMyNameES7 = () =>{
-console.log(this.name);
-}
-
+  PrintMyNameES7 = () => {
+    console.log(this.name);
+  };
 }
 const personES7 = new PersonES7();
 personES7.PrintMyNameES7();
