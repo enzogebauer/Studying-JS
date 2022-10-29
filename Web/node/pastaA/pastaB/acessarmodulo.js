@@ -2,7 +2,7 @@ const moduloA  = require("../../moduloA") //sempre respeite as letras maiúscula
 console.log(moduloA)
 const http = require("http")
 http.createServer((req,res)=>{
-  res.write("Bom dia")
+  res.write("DUnkel é corno, bom dia")
   res.end()
 }).listen(8080)
 
