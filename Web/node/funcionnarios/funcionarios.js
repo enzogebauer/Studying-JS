@@ -17,11 +17,11 @@ axios.get(url).then((res)=>{
 //   console.log("Essa é a funcionária de origem chinesa que possui o menor salário: ")
 //   console.log(func)
   // funcionario que ganha o maior salário é de Belarus
-  const belarus = f => f.pais === "Belarus"
-  const sexo = f => f.genero === "M"
-  const maiorsalario = (funcMs,funcAtual) => {return funcAtual.salario < funcMs.salaria ? funcMs: funcAtual }
+  const usa = f => f.pais === "United States"
+  const sexo = f => f.genero === "F"
+  const maiorsalario = (funcMs,funcAtual) => {return funcAtual.salario <  funcMs.salario ? funcMs: funcAtual }
   const func = funcionarios
-  .filter(belarus) 
+  .filter(usa) 
   .filter(sexo) 
   .reduce(maiorsalario)
   console.log("Teste")
