@@ -18,12 +18,17 @@ app.post('/produtos/',(req,res,next) => {
   })
   res.send(produto) //converte o obj em um json que será enviado para a web 
 })
-app.post('/produtos/:id',(req,res,next) => { 
+app.put('/produtos/:id',(req,res,next) => { 
   const produto = bancodedados.salvarProduto({
-    id:req.body.id,
+    id:req.params.id,
     nome:req.body.nome,
     preco: req.body.preco
   })
+  res.send(produto) //converte o obj em um json que será enviado para a web 
+})
+app.delete('/produtos/:id',(req,res,next) => { 
+  const produto = bancodedados.excluirProduto(req.params.id
+  )
   res.send(produto) //converte o obj em um json que será enviado para a web 
 })
 app.listen(porta,()=>{
